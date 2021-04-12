@@ -9,7 +9,7 @@ import io.dropwizard.jersey.gzip.GZipDecoder;
 import io.dropwizard.jersey.validation.Validators;
 import io.dropwizard.lifecycle.setup.ExecutorServiceBuilder;
 import io.dropwizard.lifecycle.setup.LifecycleEnvironment;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.ServiceUnavailableRetryStrategy;

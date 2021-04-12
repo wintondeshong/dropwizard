@@ -1,11 +1,11 @@
 package io.dropwizard.hibernate;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.db.PooledDataSourceFactory;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Bootstrap;
+import io.dropwizard.core.setup.Environment;
 import io.dropwizard.testing.ConfigOverride;
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit5.DropwizardAppExtension;
@@ -97,7 +97,7 @@ class TransactionHandlingTest {
         }
     }
 
-    public static class TestApplication extends io.dropwizard.Application<TestConfiguration> {
+    public static class TestApplication extends io.dropwizard.core.Application<TestConfiguration> {
         final HibernateBundle<TestConfiguration> hibernate = new HibernateBundle<TestConfiguration>(
             Arrays.asList(Person.class, Dog.class), new SessionFactoryFactory()) {
             @Override

@@ -9,7 +9,7 @@ import io.dropwizard.jersey.jackson.JacksonFeature;
 import io.dropwizard.jersey.validation.HibernateValidationBinder;
 import io.dropwizard.jersey.validation.Validators;
 import io.dropwizard.lifecycle.Managed;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.ServiceUnavailableRetryStrategy;
@@ -167,7 +167,7 @@ public class JerseyClientBuilder {
      * @param executorService a thread pool
      * @param objectMapper    an object mapper
      * @return {@code this}
-     * @see #using(io.dropwizard.setup.Environment)
+     * @see #using(io.dropwizard.core.setup.Environment)
      */
     public JerseyClientBuilder using(ExecutorService executorService, ObjectMapper objectMapper) {
         this.executorService = executorService;
@@ -180,7 +180,7 @@ public class JerseyClientBuilder {
      *
      * @param executorService a thread pool
      * @return {@code this}
-     * @see #using(io.dropwizard.setup.Environment)
+     * @see #using(io.dropwizard.core.setup.Environment)
      */
     public JerseyClientBuilder using(ExecutorService executorService) {
         this.executorService = executorService;
@@ -192,7 +192,7 @@ public class JerseyClientBuilder {
      *
      * @param objectMapper    an object mapper
      * @return {@code this}
-     * @see #using(io.dropwizard.setup.Environment)
+     * @see #using(io.dropwizard.core.setup.Environment)
      */
     public JerseyClientBuilder using(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;

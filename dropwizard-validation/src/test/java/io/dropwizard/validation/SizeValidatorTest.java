@@ -13,6 +13,7 @@ import java.util.Locale;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
+@SuppressWarnings("deprecation")
 public class SizeValidatorTest {
     @SuppressWarnings("unused")
     public static class Example {
